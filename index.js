@@ -6,6 +6,7 @@ let wordLength = 0;
 let startWord  = ["FOUR", "EYE", "TIGER", "WHEAT"];
 let lastWord =  ["FIVE","LID", "ROSES", "BREAD"];
 let wordList =  [];
+let targetWord = "";
 async function checkWord(word) {
     fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + word).then( async(response) => {
         if(!response.ok){
@@ -39,7 +40,10 @@ function chooseWord() {
       wordList = [];
       wordList.push(theWord);
       wordLength = theWord.length;
-      let targetWord = lastWord[] // Hur smäller jag in så att jag hittar indexet för 
+            if (theWord == startWord[1]) {targetWord = lastWord[1] }
+       else if (theWord == startWord[2]) {targetWord = lastWord[2] }
+       else if (theWord == startWord[3]) {targetWord = lastWord[3] }
+       else if (theWord == startWord[4]) {targetWord = lastWord[4] }
   }
   else{console.log("Något gick fel")}
 }
